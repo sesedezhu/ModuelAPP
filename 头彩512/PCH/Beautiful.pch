@@ -1,0 +1,41 @@
+//
+//  Beautiful.pch
+//  醉美光坡
+//
+//  Created by 涛程 on 2018/5/8.
+//  Copyright © 2018年 sanya105. All rights reserved.
+//
+
+#ifndef Beautiful_pch
+#define Beautiful_pch
+
+#import "BaseHeader.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "MBProgressHUD+HUD.h"
+#import "UIView+SDAutoLayout.h"
+#import "LAndRRequest.h"                       //网络请求
+#import "UIImageView+WebCache.h" 
+#define MBHUD [MBProgressHUD showCustomGifHUD:@"加载中..." imageName:@"fenghuolun"]
+
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define kScreenHeight  ([UIScreen mainScreen].bounds.size.height)
+//写死状态栏高度
+#define CTStopStatusRect  (kScreenHeight== 812.0 ? 44 : 20)
+//写死导航栏高度
+#define CTStopNavRect     (kScreenHeight== 812.0 ? 44 : 44)
+/*--TabBar的高度----*/
+#define CTStopTabBarRect  (kScreenHeight== 812.0 ? 83 : 49)
+//以750为设计稿--原始高度为667
+#define CONVER_VALUE(x) ceil(kScreenWidth * x / 375)
+//以640为设计稿 -------本项目以640*320为模型
+#define TRANS_VALUE(x) ceil(kScreenWidth * x / 320)
+
+//颜色
+#define allcolorAlphasCT(r,g,b,CGFloat)  [UIColor  colorWithRed:r/255.00 green:g/255.00 blue:b/255.00 alpha:CGFloat]
+#define allcolor [UIColor  colorWithRed:85/255.00 green:210/255.00 blue:146/255.00 alpha:1.0f]
+
+//发现详情页返回webview高度
+#define WebHightScview @"WebHightscview"
+
+#endif /* Beautiful_pch */
